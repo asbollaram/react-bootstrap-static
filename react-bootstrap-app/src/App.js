@@ -1,5 +1,5 @@
 import './App.css';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
@@ -11,7 +11,7 @@ function App() {
     <Container fluid>
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">Bollaram Studio</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -39,7 +39,7 @@ function App() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://via.placeholder.com/1000"
+            src="https://via.placeholder.com/500"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -50,7 +50,7 @@ function App() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://via.placeholder.com/1000"
+            src="https://via.placeholder.com/500"
             alt="Second slide"
           />
 
@@ -62,7 +62,7 @@ function App() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://via.placeholder.com/1000"
+            src="https://via.placeholder.com/500"
             alt="Third slide"
           />
 
@@ -75,32 +75,86 @@ function App() {
         </Carousel.Item>
       </Carousel>
       <hr />
-      {[
-        'Primary',
-        'Secondary',
-        'Success',
-        'Danger',
-        'Warning',
-        'Info',
-        'Light',
-        'Dark',
-      ].map((variant) => (
-        <Card
-          bg={variant.toLowerCase()}
-          key={variant}
-          text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-          className="mb-2"
-        >
-          <Card.Header>Header</Card.Header>
-          <Card.Body>
-            <Card.Title>{variant} Card Title </Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      ))}
+      <Container>
+        {[
+          'Primary',
+          'Secondary',
+          'Success',
+          'Danger',
+          'Warning',
+          'Info',
+          'Light',
+          'Dark',
+        ].map((variant) => (
+          <Card
+            bg={variant.toLowerCase()}
+            key={variant}
+            text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+            className="mb-2"
+          >
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>{variant} Card Title </Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        ))}
+      </Container>
+      <hr />
+      <Container fluid className="bg-light py-5 my-2">
+        <footer>
+          <Row>
+            <Col sm="4">
+              <a
+                href="/"
+                className="d-flex align-items-center mb-3 link-dark text-decoration-none"
+              >
+                Bollaram Studio
+              </a>
+              <p class="text-muted">© 2022</p>
+            </Col>
+            <Col sm={2}>
+              <h5 className="py-2">Section</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2">Home</li>
+                <li className="nav-item mb-2">Features</li>
+                <li className="nav-item mb-2">Pricing</li>
+                <li className="nav-item mb-2">FAQs</li>
+              </ul>
+            </Col>
+            <Col sm={2}>
+              <h5 className="py-2">Section</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2">Home</li>
+                <li className="nav-item mb-2">Features</li>
+                <li className="nav-item mb-2">Pricing</li>
+                <li className="nav-item mb-2">FAQs</li>
+              </ul>
+            </Col>
+            <Col sm={2}>
+              <h5 className="py-2">Section</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2">Home</li>
+                <li className="nav-item mb-2">Features</li>
+                <li className="nav-item mb-2">Pricing</li>
+                <li className="nav-item mb-2">FAQs</li>
+              </ul>
+            </Col>
+            <Col sm={2}>
+              <h5 className="py-2">Section</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2">Home</li>
+                <li className="nav-item mb-2">Features</li>
+                <li className="nav-item mb-2">Pricing</li>
+                <li className="nav-item mb-2">FAQs</li>
+              </ul>
+            </Col>
+          </Row>
+        </footer>
+      </Container>
     </Container>
   );
 }
